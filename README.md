@@ -32,7 +32,7 @@ _Since this library relies on an impure render to collect refs, it is not advise
 
 The main export that returns an array of refs as well as an instance hook that's used to subscribe refs.
 
-### refs [{ ref, key }]
+### refs { current: [{ ref, key }] }
 
 This is a collection of the currently subscribed refs.
 
