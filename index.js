@@ -14,7 +14,7 @@ export function useRefList() {
   // mutableSource is only responsible for updating a number so we can
   // trigger an update in children
   const mutableSource = useConstant(() =>
-    React.createMutableSource(null, () => version.current)
+    React.unstable_createMutableSource(null, () => version.current)
   )
 
   React.useLayoutEffect(() => {
@@ -40,7 +40,7 @@ export function useRefList() {
   const useRef = React.useCallback((key, initialValue) => {
     const ref = React.useRef(initialValue)
 
-    React.useMutableSource(
+    React.unstable_useMutableSource(
       // we exclusively use a mutable source to propagate updates to components to fix their indexes
       mutableSource,
       // we update the component when the "version" has changed in the parent useLayoutEffect
