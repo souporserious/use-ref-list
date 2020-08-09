@@ -1,6 +1,6 @@
 {
   "name": "use-ref-list",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "source": "index.js",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
