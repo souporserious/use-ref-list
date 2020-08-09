@@ -15,7 +15,8 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.10.3",
